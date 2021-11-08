@@ -28,7 +28,7 @@ Partial Class PortSet
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(402, 177)
+        Me.ClientSize = New System.Drawing.Size(402, 147)
         Me.Name = "PortSet"
         Me.Text = "PortSet"
         Me.ResumeLayout(False)

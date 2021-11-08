@@ -27,17 +27,17 @@ Partial Class MainForm
         Me.SP = New System.IO.Ports.SerialPort(Me.components)
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ФайлToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ОткрытьToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ВыходToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.НастройкиToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ОПрограммеToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.НастройкиСтанкаToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.НастройкиСтанкаToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.КалибровкаToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EEPROMToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ОПрограммеToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
-        Me.ОткрытьToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ВыходToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.MenuStrip1.SuspendLayout()
@@ -62,18 +62,24 @@ Partial Class MainForm
         Me.ФайлToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
         Me.ФайлToolStripMenuItem.Text = "Файл"
         '
+        'ОткрытьToolStripMenuItem
+        '
+        Me.ОткрытьToolStripMenuItem.Name = "ОткрытьToolStripMenuItem"
+        Me.ОткрытьToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.ОткрытьToolStripMenuItem.Text = "Открыть"
+        '
+        'ВыходToolStripMenuItem
+        '
+        Me.ВыходToolStripMenuItem.Name = "ВыходToolStripMenuItem"
+        Me.ВыходToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.ВыходToolStripMenuItem.Text = "Выход"
+        '
         'НастройкиToolStripMenuItem
         '
         Me.НастройкиToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.НастройкиСтанкаToolStripMenuItem, Me.НастройкиСтанкаToolStripMenuItem1})
         Me.НастройкиToolStripMenuItem.Name = "НастройкиToolStripMenuItem"
         Me.НастройкиToolStripMenuItem.Size = New System.Drawing.Size(79, 20)
         Me.НастройкиToolStripMenuItem.Text = "Настройки"
-        '
-        'ОПрограммеToolStripMenuItem
-        '
-        Me.ОПрограммеToolStripMenuItem.Name = "ОПрограммеToolStripMenuItem"
-        Me.ОПрограммеToolStripMenuItem.Size = New System.Drawing.Size(94, 20)
-        Me.ОПрограммеToolStripMenuItem.Text = "О программе"
         '
         'НастройкиСтанкаToolStripMenuItem
         '
@@ -99,6 +105,12 @@ Partial Class MainForm
         Me.EEPROMToolStripMenuItem.Name = "EEPROMToolStripMenuItem"
         Me.EEPROMToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.EEPROMToolStripMenuItem.Text = "EEPROM"
+        '
+        'ОПрограммеToolStripMenuItem
+        '
+        Me.ОПрограммеToolStripMenuItem.Name = "ОПрограммеToolStripMenuItem"
+        Me.ОПрограммеToolStripMenuItem.Size = New System.Drawing.Size(94, 20)
+        Me.ОПрограммеToolStripMenuItem.Text = "О программе"
         '
         'ToolStrip1
         '
@@ -127,18 +139,6 @@ Partial Class MainForm
         Me.ToolStripButton2.Name = "ToolStripButton2"
         Me.ToolStripButton2.Size = New System.Drawing.Size(21, 20)
         Me.ToolStripButton2.Text = "ToolStripButton2"
-        '
-        'ОткрытьToolStripMenuItem
-        '
-        Me.ОткрытьToolStripMenuItem.Name = "ОткрытьToolStripMenuItem"
-        Me.ОткрытьToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ОткрытьToolStripMenuItem.Text = "Открыть"
-        '
-        'ВыходToolStripMenuItem
-        '
-        Me.ВыходToolStripMenuItem.Name = "ВыходToolStripMenuItem"
-        Me.ВыходToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ВыходToolStripMenuItem.Text = "Выход"
         '
         'ToolStripSeparator1
         '
