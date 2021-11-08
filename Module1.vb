@@ -8,6 +8,11 @@
         SetOutString = "N" & N & " " & str & "*" & CheckSum("N" & N & " " & str)
         Return SetOutString
     End Function
+    ''' <summary>
+    ''' Расчет контрольной суммы пакета
+    ''' </summary>
+    ''' <param name="indata"></param>
+    ''' <returns></returns>
     Private Function CheckSum(ByVal indata As String) As Byte
         Dim i As Long
         CheckSum = 0
