@@ -113,6 +113,12 @@
     <Compile Include="AboutBox1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Calibr.Designer.vb">
+      <DependentUpon>Calibr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Calibr.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="EEPROM.Designer.vb">
       <DependentUpon>EEPROM.vb</DependentUpon>
     </Compile>
@@ -126,6 +132,7 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Macro.vb" />
     <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
