@@ -30,7 +30,7 @@ Partial Class PortSet
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(402, 147)
         Me.Name = "PortSet"
-        Me.Text = "PortSet"
+        Me.Text = "Настройка соединения"
         Me.ResumeLayout(False)
 
     End Sub
