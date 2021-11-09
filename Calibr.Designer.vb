@@ -22,9 +22,40 @@ Partial Class Calibr
     'Не изменяйте ее в редакторе исходного кода.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.tbXMax = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.SuspendLayout()
+        '
+        'tbXMax
+        '
+        Me.tbXMax.Location = New System.Drawing.Point(155, 12)
+        Me.tbXMax.Name = "tbXMax"
+        Me.tbXMax.Size = New System.Drawing.Size(71, 20)
+        Me.tbXMax.TabIndex = 0
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(358, 23)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(87, 43)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Calibr
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.tbXMax)
+        Me.Name = "Calibr"
         Me.Text = "Calibr"
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
+
+    Friend WithEvents tbXMax As TextBox
+    Friend WithEvents Button1 As Button
 End Class

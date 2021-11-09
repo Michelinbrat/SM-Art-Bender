@@ -1,4 +1,6 @@
-﻿Public Class MainForm
+﻿Imports System.ComponentModel
+
+Public Class MainForm
     Private Sub ОПрограммеToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ОПрограммеToolStripMenuItem.Click
         AboutBox1.ShowDialog()
     End Sub
@@ -21,5 +23,14 @@
 
     Private Sub ВыходToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ВыходToolStripMenuItem.Click
         MainForm.ActiveForm.Close()
+    End Sub
+
+    Private Sub MainForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        My.Settings.Save()
+    End Sub
+
+    Private Sub КалибровкаToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles КалибровкаToolStripMenuItem.Click
+        Calibr.ShowDialog()
+
     End Sub
 End Class

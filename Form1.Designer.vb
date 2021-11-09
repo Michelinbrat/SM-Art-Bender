@@ -90,7 +90,7 @@ Partial Class MainForm
         'ВыходToolStripMenuItem
         '
         Me.ВыходToolStripMenuItem.Name = "ВыходToolStripMenuItem"
-        Me.ВыходToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ВыходToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.ВыходToolStripMenuItem.Text = "Выход"
         '
         'НастройкиToolStripMenuItem
@@ -116,13 +116,13 @@ Partial Class MainForm
         'КалибровкаToolStripMenuItem
         '
         Me.КалибровкаToolStripMenuItem.Name = "КалибровкаToolStripMenuItem"
-        Me.КалибровкаToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
+        Me.КалибровкаToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.КалибровкаToolStripMenuItem.Text = "Калибровка"
         '
         'EEPROMToolStripMenuItem
         '
         Me.EEPROMToolStripMenuItem.Name = "EEPROMToolStripMenuItem"
-        Me.EEPROMToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
+        Me.EEPROMToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.EEPROMToolStripMenuItem.Text = "EEPROM"
         '
         'ОПрограммеToolStripMenuItem
@@ -204,9 +204,9 @@ Partial Class MainForm
         Me.FlowLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.FlowLayoutPanel2.Controls.Add(Me.rtbDisplay)
         Me.FlowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.FlowLayoutPanel2.Location = New System.Drawing.Point(0, 382)
+        Me.FlowLayoutPanel2.Location = New System.Drawing.Point(0, 299)
         Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
-        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(367, 118)
+        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(367, 201)
         Me.FlowLayoutPanel2.TabIndex = 1
         '
         'rtbDisplay
@@ -214,7 +214,7 @@ Partial Class MainForm
         Me.rtbDisplay.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.rtbDisplay.Location = New System.Drawing.Point(3, 3)
         Me.rtbDisplay.Name = "rtbDisplay"
-        Me.rtbDisplay.Size = New System.Drawing.Size(361, 112)
+        Me.rtbDisplay.Size = New System.Drawing.Size(361, 195)
         Me.rtbDisplay.TabIndex = 0
         Me.rtbDisplay.Text = ""
         '

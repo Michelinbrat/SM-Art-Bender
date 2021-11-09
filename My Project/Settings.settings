@@ -8,5 +8,8 @@
     <Setting Name="Baudrate" Type="System.String" Scope="Application">
       <Value Profile="(Default)">115200</Value>
     </Setting>
+    <Setting Name="XMax" Type="System.String" Scope="User">
+      <Value Profile="(Default)">333</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

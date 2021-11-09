@@ -71,6 +71,18 @@ Namespace My
                 Return CType(Me("Baudrate"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("333")>  _
+        Public Property XMax() As String
+            Get
+                Return CType(Me("XMax"),String)
+            End Get
+            Set
+                Me("XMax") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
