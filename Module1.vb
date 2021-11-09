@@ -1,4 +1,10 @@
 ﻿Module Module1
+#Region "Global variables"
+    'Cut machine block
+    Public XPositionMAx As Double
+    Public XPositionZero As Double
+#End Region
+
 #Region "GCode prepare"
     Public Function SetOutString(ByVal N As Long, ByVal GcodeS As String) As String
         Dim i As Long = 1

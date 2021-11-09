@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class EEPROM
     Inherits System.Windows.Forms.Form
 
     'Форма переопределяет dispose для очистки списка компонентов.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class EEPROM
     'Примечание: следующая процедура является обязательной для конструктора форм Windows Forms
     'Для ее изменения используйте конструктор форм Windows Form.  
     'Не изменяйте ее в редакторе исходного кода.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -88,9 +88,9 @@ Partial Class EEPROM
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(12, 92)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(173, 13)
+        Me.Label4.Size = New System.Drawing.Size(152, 13)
         Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Ускорение оси оси X (угол реза)"
+        Me.Label4.Text = "Ускорение оси X (угол реза)"
         '
         'TextBox3
         '
@@ -181,7 +181,7 @@ Partial Class EEPROM
         Me.GroupBox1.Size = New System.Drawing.Size(305, 94)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
+        Me.GroupBox1.Text = "Ось Z (устройство сгиба)"
         '
         'EEPROM
         '
