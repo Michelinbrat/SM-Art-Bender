@@ -1,8 +1,15 @@
 ﻿Module Module1
 #Region "Global variables"
     'Cut machine block
-    Public XPositionMAx As Double
+    Public XPositionMax As Double
     Public XPositionZero As Double
+    Public ToolAngle As Double
+    Public MachineRadius As Double
+    Public Enum Direction
+        CW = 1
+        CCW = -1
+    End Enum
+
 #End Region
 
 #Region "GCode prepare"

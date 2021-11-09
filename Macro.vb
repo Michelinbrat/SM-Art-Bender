@@ -2,8 +2,8 @@
 
     Public CutProgram As List(Of String)
     Private SawMotorOn = "M3"
-    Private Function AngleToPosition(angle As Double) As Double
-
+    Private Function AngleToPosition(angle As Double, dir As Direction) As Double
+        Return AngleToPosition = XPositionZero + dir * (Math.PI * MachineRadius * (angle / 2 - ToolAngle / 2) / 180)
     End Function
     Public Sub Cut(CutAngle As Double, AngleFeed As Long, CutLength As Double, CutFeed As Long, retract As Double)
         With CutProgram
