@@ -1,4 +1,5 @@
 ﻿Module Module1
+#Region "GCode prepare"
     Public Function SetOutString(ByVal N As Long, ByVal GcodeS As String) As String
         Dim i As Long = 1
         Dim str As String = Nothing
@@ -21,4 +22,14 @@
         Next
         Return CheckSum
     End Function
+    Public Function SendGCodeWA(Num As Long, Command As String, port As String) As String
+
+        MainForm.SP.WriteLine(SetOutString(Num, Command))
+        Return "ok"
+    End Function
+#End Region
+
+#Region "File reader"
+
+#End Region
 End Module

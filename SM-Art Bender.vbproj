@@ -64,10 +64,10 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>D96E6981BBF95044F5D7D824C7DF8D25E8A93BB1</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>96E631524EA504F4B02635B980459D68E8427893</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>SM-Art Bender_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>SM-Art Bender_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -189,6 +189,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="SM-Art Bender_1_TemporaryKey.pfx" />
     <None Include="SM-Art Bender_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
