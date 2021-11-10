@@ -1,4 +1,7 @@
-﻿Imports Corel.Interop.CorelDRAW
+﻿
+
+
+Imports CorelDRAW
 
 Private Sub btnExport_Click()
     Dim task As ShapeRange
@@ -35,12 +38,12 @@ On Error Resume Next
             EndX = seg.EndNode.PositionX
             EndY = seg.EndNode.PositionY
             If seg.Index = 1 Then
-                Print #1, "Start Position: X" & DigToStr(BegX) & " Y" & DigToStr(BegY)
+                '  Print #1, "Start Position: X" & DigToStr(BegX) & " Y" & DigToStr(BegY)
 
-        End If
+            End If
 
             Select Case seg.Type
-                Case cdrLineSegment
+                Case VGCore.cdrSegmentType.cdrLineSegment
 
 
                     Print #1, "Line: X:" & DigToStr(EndX) & " Y:" & DigToStr(EndY)
@@ -64,14 +67,12 @@ On Error Resume Next
 Close #1
 End Sub
 
-Private Function DigToStr(ByVal Number As Double) As String
+Private Function DigToStr(Numb As Double) As String
     Dim number2 As String
-    number2 = CStr(Round(Number, 3))
+    number2 = CStr(Math.Round(Numb, 3))
     DigToStr = Replace(number2, ",", ".", , , vbTextCompare)
 End Function
-Private Sub UserForm_Click()
 
-End Sub
 
 Private Sub UserForm_Initialize()
     ActiveDocument.Unit = cdrMillimeter
