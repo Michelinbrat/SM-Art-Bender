@@ -83,6 +83,42 @@ Namespace My
                 Me("XMax") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property XCenter() As String
+            Get
+                Return CType(Me("XCenter"),String)
+            End Get
+            Set
+                Me("XCenter") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property BendMax() As String
+            Get
+                Return CType(Me("BendMax"),String)
+            End Get
+            Set
+                Me("BendMax") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property BendCenter() As String
+            Get
+                Return CType(Me("BendCenter"),String)
+            End Get
+            Set
+                Me("BendCenter") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

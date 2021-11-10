@@ -11,5 +11,14 @@
     <Setting Name="XMax" Type="System.String" Scope="User">
       <Value Profile="(Default)">333</Value>
     </Setting>
+    <Setting Name="XCenter" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="BendMax" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="BendCenter" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

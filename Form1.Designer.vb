@@ -47,6 +47,12 @@ Partial Class MainForm
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,6 +62,7 @@ Partial Class MainForm
         Me.StatusStrip1.SuspendLayout()
         Me.FlowLayoutPanel2.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
+        Me.ToolStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
         'SP
@@ -70,7 +77,7 @@ Partial Class MainForm
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ФайлToolStripMenuItem, Me.НастройкиToolStripMenuItem, Me.ОПрограммеToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1280, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(895, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -84,7 +91,9 @@ Partial Class MainForm
         'ОткрытьToolStripMenuItem
         '
         Me.ОткрытьToolStripMenuItem.Name = "ОткрытьToolStripMenuItem"
-        Me.ОткрытьToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.ОткрытьToolStripMenuItem.ShortcutKeyDisplayString = ""
+        Me.ОткрытьToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
+        Me.ОткрытьToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ОткрытьToolStripMenuItem.Text = "Открыть"
         '
         'ВыходToolStripMenuItem
@@ -172,6 +181,7 @@ Partial Class MainForm
         '
         'SplitContainer1.Panel1
         '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.ToolStrip2)
         Me.SplitContainer1.Panel1.Controls.Add(Me.StatusStrip1)
         '
         'SplitContainer1.Panel2
@@ -179,8 +189,8 @@ Partial Class MainForm
         Me.SplitContainer1.Panel2.BackColor = System.Drawing.SystemColors.Control
         Me.SplitContainer1.Panel2.Controls.Add(Me.FlowLayoutPanel2)
         Me.SplitContainer1.Panel2.Controls.Add(Me.FlowLayoutPanel1)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1256, 500)
-        Me.SplitContainer1.SplitterDistance = 885
+        Me.SplitContainer1.Size = New System.Drawing.Size(871, 500)
+        Me.SplitContainer1.SplitterDistance = 613
         Me.SplitContainer1.TabIndex = 2
         '
         'StatusStrip1
@@ -188,7 +198,7 @@ Partial Class MainForm
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripProgressBar1})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 478)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(885, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(613, 22)
         Me.StatusStrip1.TabIndex = 0
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -206,7 +216,7 @@ Partial Class MainForm
         Me.FlowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.FlowLayoutPanel2.Location = New System.Drawing.Point(0, 299)
         Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
-        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(367, 201)
+        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(254, 201)
         Me.FlowLayoutPanel2.TabIndex = 1
         '
         'rtbDisplay
@@ -222,9 +232,10 @@ Partial Class MainForm
         '
         Me.FlowLayoutPanel1.Controls.Add(Me.Button1)
         Me.FlowLayoutPanel1.Controls.Add(Me.Button2)
+        Me.FlowLayoutPanel1.Controls.Add(Me.ComboBox1)
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(3, 18)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(352, 37)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(326, 86)
         Me.FlowLayoutPanel1.TabIndex = 0
         '
         'Button1
@@ -245,11 +256,59 @@ Partial Class MainForm
         Me.Button2.Text = "Button1"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(163, 3)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(154, 21)
+        Me.ComboBox1.TabIndex = 1
+        '
+        'ToolStrip2
+        '
+        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripButton5})
+        Me.ToolStrip2.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip2.Name = "ToolStrip2"
+        Me.ToolStrip2.Size = New System.Drawing.Size(613, 25)
+        Me.ToolStrip2.TabIndex = 1
+        Me.ToolStrip2.Text = "ToolStrip2"
+        '
+        'ToolStripButton3
+        '
+        Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton3.Image = CType(resources.GetObject("ToolStripButton3.Image"), System.Drawing.Image)
+        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton3.Name = "ToolStripButton3"
+        Me.ToolStripButton3.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton3.Text = "ToolStripButton3"
+        '
+        'ToolStripButton4
+        '
+        Me.ToolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton4.Image = CType(resources.GetObject("ToolStripButton4.Image"), System.Drawing.Image)
+        Me.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton4.Name = "ToolStripButton4"
+        Me.ToolStripButton4.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton4.Text = "ToolStripButton4"
+        '
+        'ToolStripButton5
+        '
+        Me.ToolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton5.Image = CType(resources.GetObject("ToolStripButton5.Image"), System.Drawing.Image)
+        Me.ToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton5.Name = "ToolStripButton5"
+        Me.ToolStripButton5.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton5.Text = "ToolStripButton5"
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1280, 524)
+        Me.ClientSize = New System.Drawing.Size(895, 524)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.MenuStrip1)
@@ -270,6 +329,8 @@ Partial Class MainForm
         Me.StatusStrip1.PerformLayout()
         Me.FlowLayoutPanel2.ResumeLayout(False)
         Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.ToolStrip2.ResumeLayout(False)
+        Me.ToolStrip2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -297,4 +358,10 @@ Partial Class MainForm
     Friend WithEvents Button2 As Button
     Friend WithEvents FlowLayoutPanel2 As FlowLayoutPanel
     Friend WithEvents rtbDisplay As RichTextBox
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents ToolStrip2 As ToolStrip
+    Friend WithEvents ToolStripButton3 As ToolStripButton
+    Friend WithEvents ToolStripButton4 As ToolStripButton
+    Friend WithEvents ToolStripButton5 As ToolStripButton
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class

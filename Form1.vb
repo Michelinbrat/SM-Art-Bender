@@ -33,4 +33,11 @@ Public Class MainForm
         Calibr.ShowDialog()
 
     End Sub
+    Private Sub Painter()
+
+    End Sub
+
+    Private Sub ОткрытьToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ОткрытьToolStripMenuItem.Click
+        OpenFileDialog1.ShowDialog()
+    End Sub
 End Class
