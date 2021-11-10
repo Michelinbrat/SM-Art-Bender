@@ -1,6 +1,4 @@
 ﻿
-
-
 Imports CorelDRAW
 
 Private Sub btnExport_Click()
@@ -69,7 +67,7 @@ End Sub
 
 Private Function DigToStr(Numb As Double) As String
     Dim number2 As String
-    number2 = CStr(Math.Round(Numb, 3))
+    number2 = CStr(Math.Round(Number, 3))
     DigToStr = Replace(number2, ",", ".", , , vbTextCompare)
 End Function
 
