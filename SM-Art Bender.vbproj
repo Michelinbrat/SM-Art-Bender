@@ -64,7 +64,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>105174B88E3B3040271D8AE78B3F154FAFFDF3D3</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>9A7B29F72365A54AD4BD1FF45A62B7D2CF72AEF4</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>
@@ -85,9 +85,11 @@
   <ItemGroup>
     <Reference Include="Corel.Interop.CorelDRAW, Version=21.3.0.755, Culture=neutral, PublicKeyToken=e4835428e22ad6f9, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\Program Files\Corel\CorelDRAW Graphics Suite 2020\Programs\Assemblies\Corel.Interop.CorelDRAW.dll</HintPath>
     </Reference>
     <Reference Include="Corel.Interop.VGCore, Version=21.3.0.755, Culture=neutral, PublicKeyToken=e4835428e22ad6f9, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\Program Files\Corel\CorelDRAW Graphics Suite 2020\Programs\Assemblies\Corel.Interop.VGCore.dll</HintPath>
     </Reference>
     <Reference Include="NuGet.Common, Version=6.0.0.280, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\NuGet.Common.6.0.0\lib\net472\NuGet.Common.dll</HintPath>
