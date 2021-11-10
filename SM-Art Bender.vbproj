@@ -83,6 +83,12 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Corel.Interop.CorelDRAW, Version=21.3.0.755, Culture=neutral, PublicKeyToken=e4835428e22ad6f9, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Corel.Interop.VGCore, Version=21.3.0.755, Culture=neutral, PublicKeyToken=e4835428e22ad6f9, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="NuGet.Common, Version=6.0.0.280, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\NuGet.Common.6.0.0\lib\net472\NuGet.Common.dll</HintPath>
     </Reference>

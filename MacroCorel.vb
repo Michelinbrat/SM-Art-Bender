@@ -1,7 +1,9 @@
-﻿Private Sub btnExport_Click()
+﻿Imports Corel.Interop.CorelDRAW
+
+Private Sub btnExport_Click()
     Dim task As ShapeRange
-Set task = ActiveSelectionRange
-BinderExport task
+    task = ActiveSelectionRange
+    BinderExport task
 End Sub
 
 ' *********************************************Действующий экспортер**********************************************
