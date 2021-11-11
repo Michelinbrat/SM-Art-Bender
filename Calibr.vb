@@ -9,8 +9,8 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Cut(35, 200, 60, 200, 500, 10)
-        For i = 0 To 5
+        Cut(35, 200, 45, 200, 500, 10)
+        For i = 0 To 10
             Debug.Print(CutProgram(i))
         Next i
     End Sub
