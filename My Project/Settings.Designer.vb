@@ -74,49 +74,25 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("333")>  _
-        Public Property XMax() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property AppPath() As String
             Get
-                Return CType(Me("XMax"),String)
+                Return CType(Me("AppPath"),String)
             End Get
             Set
-                Me("XMax") = value
+                Me("AppPath") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property XCenter() As String
+        Public Property MacroPath() As String
             Get
-                Return CType(Me("XCenter"),String)
+                Return CType(Me("MacroPath"),String)
             End Get
             Set
-                Me("XCenter") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property BendMax() As String
-            Get
-                Return CType(Me("BendMax"),String)
-            End Get
-            Set
-                Me("BendMax") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property BendCenter() As String
-            Get
-                Return CType(Me("BendCenter"),String)
-            End Get
-            Set
-                Me("BendCenter") = value
+                Me("MacroPath") = value
             End Set
         End Property
     End Class

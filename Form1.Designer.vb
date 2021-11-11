@@ -34,12 +34,17 @@ Partial Class MainForm
         Me.НастройкиСтанкаToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.КалибровкаToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EEPROMToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ПараметрыToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ОПрограммеToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
         Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
@@ -48,21 +53,18 @@ Partial Class MainForm
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        Me.ToolStrip2.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.FlowLayoutPanel2.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
-        Me.ToolStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
         'SP
@@ -93,13 +95,13 @@ Partial Class MainForm
         Me.ОткрытьToolStripMenuItem.Name = "ОткрытьToolStripMenuItem"
         Me.ОткрытьToolStripMenuItem.ShortcutKeyDisplayString = ""
         Me.ОткрытьToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
-        Me.ОткрытьToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ОткрытьToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.ОткрытьToolStripMenuItem.Text = "Открыть"
         '
         'ВыходToolStripMenuItem
         '
         Me.ВыходToolStripMenuItem.Name = "ВыходToolStripMenuItem"
-        Me.ВыходToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.ВыходToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.ВыходToolStripMenuItem.Text = "Выход"
         '
         'НастройкиToolStripMenuItem
@@ -117,7 +119,7 @@ Partial Class MainForm
         '
         'НастройкиСтанкаToolStripMenuItem1
         '
-        Me.НастройкиСтанкаToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.КалибровкаToolStripMenuItem, Me.EEPROMToolStripMenuItem})
+        Me.НастройкиСтанкаToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.КалибровкаToolStripMenuItem, Me.EEPROMToolStripMenuItem, Me.ПараметрыToolStripMenuItem})
         Me.НастройкиСтанкаToolStripMenuItem1.Name = "НастройкиСтанкаToolStripMenuItem1"
         Me.НастройкиСтанкаToolStripMenuItem1.Size = New System.Drawing.Size(201, 22)
         Me.НастройкиСтанкаToolStripMenuItem1.Text = "Настройки станка"
@@ -125,14 +127,20 @@ Partial Class MainForm
         'КалибровкаToolStripMenuItem
         '
         Me.КалибровкаToolStripMenuItem.Name = "КалибровкаToolStripMenuItem"
-        Me.КалибровкаToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.КалибровкаToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.КалибровкаToolStripMenuItem.Text = "Калибровка"
         '
         'EEPROMToolStripMenuItem
         '
         Me.EEPROMToolStripMenuItem.Name = "EEPROMToolStripMenuItem"
-        Me.EEPROMToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EEPROMToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.EEPROMToolStripMenuItem.Text = "EEPROM"
+        '
+        'ПараметрыToolStripMenuItem
+        '
+        Me.ПараметрыToolStripMenuItem.Name = "ПараметрыToolStripMenuItem"
+        Me.ПараметрыToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
+        Me.ПараметрыToolStripMenuItem.Text = "Параметры"
         '
         'ОПрограммеToolStripMenuItem
         '
@@ -192,6 +200,42 @@ Partial Class MainForm
         Me.SplitContainer1.Size = New System.Drawing.Size(871, 500)
         Me.SplitContainer1.SplitterDistance = 613
         Me.SplitContainer1.TabIndex = 2
+        '
+        'ToolStrip2
+        '
+        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripButton5})
+        Me.ToolStrip2.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip2.Name = "ToolStrip2"
+        Me.ToolStrip2.Size = New System.Drawing.Size(613, 25)
+        Me.ToolStrip2.TabIndex = 1
+        Me.ToolStrip2.Text = "ToolStrip2"
+        '
+        'ToolStripButton3
+        '
+        Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton3.Image = CType(resources.GetObject("ToolStripButton3.Image"), System.Drawing.Image)
+        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton3.Name = "ToolStripButton3"
+        Me.ToolStripButton3.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton3.Text = "ToolStripButton3"
+        '
+        'ToolStripButton4
+        '
+        Me.ToolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton4.Image = CType(resources.GetObject("ToolStripButton4.Image"), System.Drawing.Image)
+        Me.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton4.Name = "ToolStripButton4"
+        Me.ToolStripButton4.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton4.Text = "ToolStripButton4"
+        '
+        'ToolStripButton5
+        '
+        Me.ToolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton5.Image = CType(resources.GetObject("ToolStripButton5.Image"), System.Drawing.Image)
+        Me.ToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton5.Name = "ToolStripButton5"
+        Me.ToolStripButton5.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton5.Text = "ToolStripButton5"
         '
         'StatusStrip1
         '
@@ -264,45 +308,17 @@ Partial Class MainForm
         Me.ComboBox1.Size = New System.Drawing.Size(154, 21)
         Me.ComboBox1.TabIndex = 1
         '
-        'ToolStrip2
-        '
-        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripButton5})
-        Me.ToolStrip2.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip2.Name = "ToolStrip2"
-        Me.ToolStrip2.Size = New System.Drawing.Size(613, 25)
-        Me.ToolStrip2.TabIndex = 1
-        Me.ToolStrip2.Text = "ToolStrip2"
-        '
-        'ToolStripButton3
-        '
-        Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton3.Image = CType(resources.GetObject("ToolStripButton3.Image"), System.Drawing.Image)
-        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton3.Text = "ToolStripButton3"
-        '
-        'ToolStripButton4
-        '
-        Me.ToolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton4.Image = CType(resources.GetObject("ToolStripButton4.Image"), System.Drawing.Image)
-        Me.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton4.Name = "ToolStripButton4"
-        Me.ToolStripButton4.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton4.Text = "ToolStripButton4"
-        '
-        'ToolStripButton5
-        '
-        Me.ToolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton5.Image = CType(resources.GetObject("ToolStripButton5.Image"), System.Drawing.Image)
-        Me.ToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton5.Name = "ToolStripButton5"
-        Me.ToolStripButton5.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton5.Text = "ToolStripButton5"
-        '
         'OpenFileDialog1
         '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        Me.OpenFileDialog1.FileName = "*.bnd"
+        '
+        'NotifyIcon1
+        '
+        Me.NotifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info
+        Me.NotifyIcon1.BalloonTipText = "Bender"
+        Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
+        Me.NotifyIcon1.Text = "SM-Art Bender"
+        Me.NotifyIcon1.Visible = True
         '
         'MainForm
         '
@@ -325,12 +341,12 @@ Partial Class MainForm
         Me.SplitContainer1.Panel2.PerformLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
+        Me.ToolStrip2.ResumeLayout(False)
+        Me.ToolStrip2.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.FlowLayoutPanel2.ResumeLayout(False)
         Me.FlowLayoutPanel1.ResumeLayout(False)
-        Me.ToolStrip2.ResumeLayout(False)
-        Me.ToolStrip2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -364,4 +380,6 @@ Partial Class MainForm
     Friend WithEvents ToolStripButton4 As ToolStripButton
     Friend WithEvents ToolStripButton5 As ToolStripButton
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents ПараметрыToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NotifyIcon1 As NotifyIcon
 End Class

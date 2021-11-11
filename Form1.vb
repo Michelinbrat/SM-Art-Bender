@@ -40,4 +40,12 @@ Public Class MainForm
     Private Sub ОткрытьToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ОткрытьToolStripMenuItem.Click
         OpenFileDialog1.ShowDialog()
     End Sub
+
+    Private Sub НастройкиСтанкаToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles НастройкиСтанкаToolStripMenuItem1.Click
+
+    End Sub
+
+    Private Sub NotifyIcon1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles NotifyIcon1.MouseDoubleClick
+        MsgBox("cccff")
+    End Sub
 End Class
