@@ -1,9 +1,8 @@
 ﻿Module Macro
-
-    Public CutProgram As List(Of String)
-    Private SawMotorOn = "M3"
-    Private SawMotorOff = "M5"
-    Private WaitForEndOperation = "M400"
+    Public CutProgram As String()
+    Private Const SawMotorOn As String = "M3"
+    Private Const SawMotorOff = "M5"
+    Private Const WaitForEndOperation = "M400"
     Private Function AngleToPosition(angle As Double, dir As Direction) As Double
         Return AngleToPosition = XPositionZero + dir * (Math.PI * MachineRadius * (angle / 2 + ToolAngle / 2) / 180)
     End Function
@@ -13,19 +12,20 @@
         Dim Pos1 = AngleToPosition(CutAngle, Direction.CCW)
         Dim Pos2 = AngleToPosition(CutAngle, Direction.CW)
 
-        With CutProgram
-            .Add(SawMotorOn) 'Включаем пилу
-            .Add("M1 S1") ' Ждем 1 с
-            .Add("G0 Y" & Pos1 & " F" & AngleFeed) ' Поворачиваем на нужный угол
-            .Add(WaitForEndOperation) 'Ждем конца выполнения 
-            .Add("GO X" & CutLength & " F" & CutFeed) 'Режем вверх
-            .Add(WaitForEndOperation) ''Ждем конца выполнения
-            .Add("G0 Y" & Pos2 & " F" & AngleFeed) ' Разворачиваем в другом направлении
-            .Add("G0 E1" & CurrentE1 - retract) 'Смещаем заготовку на величину ретракта
-            .Add(WaitForEndOperation) ''Ждем конца выполнения
-            .Add("GO X0 F" & CutFeed) 'Режем вниз
-            .Add(SawMotorOff) 'Выключаем пилу
-        End With
+
+
+        CutProgram(0) = ("uu") 'Включаем пилу
+        CutProgram(1) = ("M1 S1") ' Ждем 1 с
+        CutProgram(2) = ("G0 Y" & Pos1 & " F" & AngleFeed) ' Поворачиваем на нужный угол
+        CutProgram(3) = (WaitForEndOperation) 'Ждем конца выполнения 
+        CutProgram(4) = ("GO X" & CutLength & " F" & CutFeed) 'Режем вверх
+        CutProgram(5) = (WaitForEndOperation) ''Ждем конца выполнения
+        CutProgram(6) = ("G0 Y" & Pos2 & " F" & AngleFeed) ' Разворачиваем в другом направлении
+        CutProgram(7) = ("G0 E1" & CurrentE1 - retract) 'Смещаем заготовку на величину ретракта
+        CutProgram(8) = (WaitForEndOperation) ''Ждем конца выполнения
+        CutProgram(9) = ("GO X0 F" & CutFeed) 'Режем вниз
+        CutProgram(10) = (SawMotorOff) 'Выключаем пилу
+
 
     End Sub
 End Module

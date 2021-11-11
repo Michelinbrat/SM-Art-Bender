@@ -72,7 +72,7 @@ Module Module2
     End Sub
 
     Private Sub UserForm_Initialize()
-        ActiveDocument.Unit = cdrMillimeter
+        'ActiveDocument.Unit = cdrMillimeter
     End Sub
 
 End Module
