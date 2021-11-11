@@ -274,5 +274,17 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConnectIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\COnnect.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\COnnectico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disconnectico.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
