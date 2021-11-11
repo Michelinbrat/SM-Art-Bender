@@ -18,16 +18,19 @@
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="ToolAngle" Type="System.Double" Scope="User">
-      <Value Profile="(Default)">0</Value>
+      <Value Profile="(Default)">35</Value>
     </Setting>
     <Setting Name="E0ShiftTableMax" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="SawStartGCode" Type="System.String" Scope="User">
-      <Value Profile="(Default)">0</Value>
+      <Value Profile="(Default)">M3</Value>
     </Setting>
     <Setting Name="SawStopGCode" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">M5</Value>
+    </Setting>
+    <Setting Name="ZBenderCorrAngle" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
   </Settings>
 </SettingsFile>

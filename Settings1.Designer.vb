@@ -88,7 +88,7 @@ Partial Friend NotInheritable Class Settings1
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+     Global.System.Configuration.DefaultSettingValueAttribute("35")>  _
     Public Property ToolAngle() As Double
         Get
             Return CType(Me("ToolAngle"),Double)
@@ -112,7 +112,7 @@ Partial Friend NotInheritable Class Settings1
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+     Global.System.Configuration.DefaultSettingValueAttribute("M3")>  _
     Public Property SawStartGCode() As String
         Get
             Return CType(Me("SawStartGCode"),String)
@@ -124,13 +124,25 @@ Partial Friend NotInheritable Class Settings1
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+     Global.System.Configuration.DefaultSettingValueAttribute("M5")>  _
     Public Property SawStopGCode() As String
         Get
             Return CType(Me("SawStopGCode"),String)
         End Get
         Set
             Me("SawStopGCode") = value
+        End Set
+    End Property
+    
+    <Global.System.Configuration.UserScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+    Public Property ZBenderCorrAngle() As Double
+        Get
+            Return CType(Me("ZBenderCorrAngle"),Double)
+        End Get
+        Set
+            Me("ZBenderCorrAngle") = value
         End Set
     End Property
 End Class

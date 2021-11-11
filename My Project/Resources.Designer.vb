@@ -61,26 +61,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
-        '''</summary>
-        Friend ReadOnly Property COnnectico() As System.Drawing.Icon
-            Get
-                Dim obj As Object = ResourceManager.GetObject("COnnectico", resourceCulture)
-                Return CType(obj,System.Drawing.Icon)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
-        '''</summary>
-        Friend ReadOnly Property Disconnectico() As System.Drawing.Icon
-            Get
-                Dim obj As Object = ResourceManager.GetObject("Disconnectico", resourceCulture)
-                Return CType(obj,System.Drawing.Icon)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Поиск локализованного ресурса типа System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property Image1() As System.Drawing.Bitmap
