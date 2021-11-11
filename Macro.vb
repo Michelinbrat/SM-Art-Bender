@@ -14,7 +14,7 @@
 
 
 
-        CutProgram(0) = SawMotorOn  'Включаем пилу
+        CutProgram(0) = SawMotorOn  'Включаем пилу 2
         CutProgram(1) = "M1 S1" ' Ждем 1 с
         CutProgram(2) = "G0 Y" & Pos1 & " F" & AngleFeed ' Поворачиваем на нужный угол
         CutProgram(3) = WaitForEndOperation 'Ждем конца выполнения 
