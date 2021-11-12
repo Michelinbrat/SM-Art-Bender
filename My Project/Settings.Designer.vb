@@ -137,6 +137,30 @@ Namespace My
                 Me("ToolAngle") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property YCutterLength() As Double
+            Get
+                Return CType(Me("YCutterLength"),Double)
+            End Get
+            Set
+                Me("YCutterLength") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property YCutterFeed() As Double
+            Get
+                Return CType(Me("YCutterFeed"),Double)
+            End Get
+            Set
+                Me("YCutterFeed") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

@@ -4,10 +4,10 @@
     Private Const SawMotorOff = "M5"
     Private Const WaitForEndOperation = "M400"
     Private Function AngleToPosition(angle As Double, dir As Direction) As Double
-        ToolAngle = 15.543
+        'ToolAngle = 15.543
         MachineRadius = 130
-        XPositionZero = 125
-        AngleToPosition = XPositionZero + dir * (Math.PI * MachineRadius * (angle / 2 + ToolAngle / 2) / 180)
+        ' XPositionZero = 125
+        AngleToPosition = My.Settings.XRotaryAxisZero + dir * (Math.PI * MachineRadius * (angle / 2 + My.Settings.ToolAngle / 2) / 180)
         Return Math.Round(AngleToPosition, 3)
     End Function
     Public Sub Cut(CutAngle As Double, AngleFeed As Long, CutLength As Double, CutFeed As Long, CurrentE1 As Double,
