@@ -61,26 +61,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
-        '''</summary>
-        Friend ReadOnly Property Icon1() As System.Drawing.Icon
-            Get
-                Dim obj As Object = ResourceManager.GetObject("Icon1", resourceCulture)
-                Return CType(obj,System.Drawing.Icon)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
-        '''</summary>
-        Friend ReadOnly Property Icon2() As System.Drawing.Icon
-            Get
-                Dim obj As Object = ResourceManager.GetObject("Icon2", resourceCulture)
-                Return CType(obj,System.Drawing.Icon)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Поиск локализованного ресурса типа System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property Image1() As System.Drawing.Bitmap

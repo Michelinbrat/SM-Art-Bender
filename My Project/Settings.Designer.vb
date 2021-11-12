@@ -72,51 +72,93 @@ Namespace My
             End Get
         End Property
         
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public ReadOnly Property AppPath() As String
+            Get
+                Return CType(Me("AppPath"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public ReadOnly Property MacroPath() As String
+            Get
+                Return CType(Me("MacroPath"),String)
+            End Get
+        End Property
+        
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("333")>  _
-        Public Property XMax() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("3678")>  _
+        Public Property XRotaryAxisMax() As Double
             Get
-                Return CType(Me("XMax"),String)
+                Return CType(Me("XRotaryAxisMax"),Double)
             End Get
             Set
-                Me("XMax") = value
+                Me("XRotaryAxisMax") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property XCenter() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("1450")>  _
+        Public Property XRotaryAxisZero() As Double
             Get
-                Return CType(Me("XCenter"),String)
+                Return CType(Me("XRotaryAxisZero"),Double)
             End Get
             Set
-                Me("XCenter") = value
+                Me("XRotaryAxisZero") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property BendMax() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("200")>  _
+        Public Property XRotaryAxisFeed() As Double
             Get
-                Return CType(Me("BendMax"),String)
+                Return CType(Me("XRotaryAxisFeed"),Double)
             End Get
             Set
-                Me("BendMax") = value
+                Me("XRotaryAxisFeed") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property BendCenter() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("35")>  _
+        Public Property ToolAngle() As Double
             Get
-                Return CType(Me("BendCenter"),String)
+                Return CType(Me("ToolAngle"),Double)
             End Get
             Set
-                Me("BendCenter") = value
+                Me("ToolAngle") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property YCutterLength() As Double
+            Get
+                Return CType(Me("YCutterLength"),Double)
+            End Get
+            Set
+                Me("YCutterLength") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property YCutterFeed() As Double
+            Get
+                Return CType(Me("YCutterFeed"),Double)
+            End Get
+            Set
+                Me("YCutterFeed") = value
             End Set
         End Property
     End Class

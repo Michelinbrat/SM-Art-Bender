@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Reflection
+﻿Imports System.Reflection
 Imports System.Runtime.InteropServices
 
 ' Общие сведения об этой сборке предоставляются следующим набором
@@ -9,13 +8,13 @@ Imports System.Runtime.InteropServices
 ' Проверьте значения атрибутов сборки
 
 <Assembly: AssemblyTitle("SM-Art Bender")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyDescription("Программа управления станком для гибки бортов объемных букв")>
+<Assembly: AssemblyCompany("SM-Art")>
 <Assembly: AssemblyProduct("SM-Art Bender")>
-<Assembly: AssemblyCopyright("Copyright ©  2021")>
+<Assembly: AssemblyCopyright("Copyright ©  Michael A. Semeniuta, 2021")>
 <Assembly: AssemblyTrademark("")>
 
-<Assembly: ComVisible(False)>
+<Assembly: ComVisible(True)>
 
 'Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
 <Assembly: Guid("1f3f01da-5db4-41b2-921d-4eceb0fa2983")>

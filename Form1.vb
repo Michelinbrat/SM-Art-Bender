@@ -1,6 +1,7 @@
 ﻿Imports System.ComponentModel
 
 Public Class MainForm
+    Public ConnectionStatus As Boolean = False
     Private Sub ОПрограммеToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ОПрограммеToolStripMenuItem.Click
         AboutBox1.ShowDialog()
     End Sub
@@ -39,5 +40,30 @@ Public Class MainForm
 
     Private Sub ОткрытьToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ОткрытьToolStripMenuItem.Click
         OpenFileDialog1.ShowDialog()
+    End Sub
+
+    Private Sub НастройкиСтанкаToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles НастройкиСтанкаToolStripMenuItem1.Click
+
+    End Sub
+
+
+
+    Private Sub NotifyIcon1_MouseClick(sender As Object, e As MouseEventArgs) Handles NotifyIcon1.MouseClick
+        MsgBox("cccff")
+    End Sub
+
+    Private Sub btnConnect_Click(sender As Object, e As EventArgs) Handles btnConnect.Click
+        If ConnectionStatus = True Then
+            ConnectionStatus = False
+            btnConnect.ImageIndex = 0
+        Else
+            ConnectionStatus = True
+            btnConnect.ImageIndex = 1
+        End If
+
+    End Sub
+
+    Private Sub ПараметрыToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ПараметрыToolStripMenuItem.Click
+        Parameters.Show()
     End Sub
 End Class
