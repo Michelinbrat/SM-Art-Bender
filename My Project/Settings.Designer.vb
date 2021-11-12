@@ -72,27 +72,69 @@ Namespace My
             End Get
         End Property
         
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property AppPath() As String
+        Public ReadOnly Property AppPath() As String
             Get
                 Return CType(Me("AppPath"),String)
             End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public ReadOnly Property MacroPath() As String
+            Get
+                Return CType(Me("MacroPath"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("3678")>  _
+        Public Property XRotaryAxisMax() As Double
+            Get
+                Return CType(Me("XRotaryAxisMax"),Double)
+            End Get
             Set
-                Me("AppPath") = value
+                Me("XRotaryAxisMax") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property MacroPath() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("1450")>  _
+        Public Property XRotaryAxisZero() As Double
             Get
-                Return CType(Me("MacroPath"),String)
+                Return CType(Me("XRotaryAxisZero"),Double)
             End Get
             Set
-                Me("MacroPath") = value
+                Me("XRotaryAxisZero") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("200")>  _
+        Public Property XRotaryAxisFeed() As Double
+            Get
+                Return CType(Me("XRotaryAxisFeed"),Double)
+            End Get
+            Set
+                Me("XRotaryAxisFeed") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("35")>  _
+        Public Property ToolAngle() As Double
+            Get
+                Return CType(Me("ToolAngle"),Double)
+            End Get
+            Set
+                Me("ToolAngle") = value
             End Set
         End Property
     End Class

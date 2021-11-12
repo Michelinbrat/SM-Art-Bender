@@ -62,4 +62,8 @@ Public Class MainForm
         End If
 
     End Sub
+
+    Private Sub ПараметрыToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ПараметрыToolStripMenuItem.Click
+        Parameters.Show()
+    End Sub
 End Class

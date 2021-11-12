@@ -1,4 +1,5 @@
-﻿Imports System.Windows.Forms
+﻿Imports System.ComponentModel
+Imports System.Windows.Forms
 
 Public Class Parameters
 
@@ -13,6 +14,20 @@ Public Class Parameters
     End Sub
 
     Private Sub Parameters_Load(sender As Object, e As EventArgs) Handles Me.Load
+        With My.Settings
+            TextBox1.Text = .XRotaryAxisMax
+            TextBox2.Text = .XRotaryAxisZero
+            TextBox3.Text = .XRotaryAxisFeed
+            TextBox9.Text = .ToolAngle
+        End With
+    End Sub
 
+    Private Sub Parameters_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        With My.Settings
+            .XRotaryAxisMax = TextBox1.Text
+            .XRotaryAxisZero = TextBox2.Text
+            .XRotaryAxisFeed = TextBox3.Text
+            .ToolAngle = TextBox9.Text
+        End With
     End Sub
 End Class

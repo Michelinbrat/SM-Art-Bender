@@ -43,14 +43,14 @@ Partial Class MainForm
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
-        Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.rtbDisplay = New System.Windows.Forms.RichTextBox()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnConnect = New System.Windows.Forms.Button()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.rtbDisplay = New System.Windows.Forms.RichTextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
-        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,8 +58,8 @@ Partial Class MainForm
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
-        Me.FlowLayoutPanel2.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
+        Me.FlowLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'SP
@@ -122,19 +122,19 @@ Partial Class MainForm
         'КалибровкаToolStripMenuItem
         '
         Me.КалибровкаToolStripMenuItem.Name = "КалибровкаToolStripMenuItem"
-        Me.КалибровкаToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
+        Me.КалибровкаToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.КалибровкаToolStripMenuItem.Text = "Калибровка"
         '
         'EEPROMToolStripMenuItem
         '
         Me.EEPROMToolStripMenuItem.Name = "EEPROMToolStripMenuItem"
-        Me.EEPROMToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
+        Me.EEPROMToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.EEPROMToolStripMenuItem.Text = "EEPROM"
         '
         'ПараметрыToolStripMenuItem
         '
         Me.ПараметрыToolStripMenuItem.Name = "ПараметрыToolStripMenuItem"
-        Me.ПараметрыToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
+        Me.ПараметрыToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ПараметрыToolStripMenuItem.Text = "Параметры"
         '
         'ОПрограммеToolStripMenuItem
@@ -210,6 +210,41 @@ Partial Class MainForm
         Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
         Me.ToolStripProgressBar1.Size = New System.Drawing.Size(150, 16)
         '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnConnect)
+        Me.FlowLayoutPanel1.Controls.Add(Me.Button2)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(3, 3)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(610, 66)
+        Me.FlowLayoutPanel1.TabIndex = 0
+        '
+        'btnConnect
+        '
+        Me.btnConnect.ImageIndex = 1
+        Me.btnConnect.ImageList = Me.ImageList1
+        Me.btnConnect.Location = New System.Drawing.Point(3, 3)
+        Me.btnConnect.Name = "btnConnect"
+        Me.btnConnect.Size = New System.Drawing.Size(60, 60)
+        Me.btnConnect.TabIndex = 0
+        Me.btnConnect.UseVisualStyleBackColor = True
+        '
+        'ImageList1
+        '
+        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList1.Images.SetKeyName(0, "Connected.png")
+        Me.ImageList1.Images.SetKeyName(1, "Disconnected.png")
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(69, 3)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(65, 60)
+        Me.Button2.TabIndex = 0
+        Me.Button2.Text = "Button1"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'FlowLayoutPanel2
         '
         Me.FlowLayoutPanel2.AutoScroll = True
@@ -231,34 +266,6 @@ Partial Class MainForm
         Me.rtbDisplay.TabIndex = 0
         Me.rtbDisplay.Text = ""
         '
-        'FlowLayoutPanel1
-        '
-        Me.FlowLayoutPanel1.Controls.Add(Me.btnConnect)
-        Me.FlowLayoutPanel1.Controls.Add(Me.Button2)
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(3, 3)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(610, 66)
-        Me.FlowLayoutPanel1.TabIndex = 0
-        '
-        'btnConnect
-        '
-        Me.btnConnect.ImageIndex = 1
-        Me.btnConnect.ImageList = Me.ImageList1
-        Me.btnConnect.Location = New System.Drawing.Point(3, 3)
-        Me.btnConnect.Name = "btnConnect"
-        Me.btnConnect.Size = New System.Drawing.Size(60, 60)
-        Me.btnConnect.TabIndex = 0
-        Me.btnConnect.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(69, 3)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(65, 60)
-        Me.Button2.TabIndex = 0
-        Me.Button2.Text = "Button1"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "*.bnd"
@@ -270,13 +277,6 @@ Partial Class MainForm
         Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
         Me.NotifyIcon1.Text = "SM-Art Bender"
         Me.NotifyIcon1.Visible = True
-        '
-        'ImageList1
-        '
-        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
-        Me.ImageList1.Images.SetKeyName(0, "Connected.png")
-        Me.ImageList1.Images.SetKeyName(1, "Disconnected.png")
         '
         'MainForm
         '
@@ -301,8 +301,8 @@ Partial Class MainForm
         Me.SplitContainer1.ResumeLayout(False)
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
-        Me.FlowLayoutPanel2.ResumeLayout(False)
         Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.FlowLayoutPanel2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

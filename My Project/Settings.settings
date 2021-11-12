@@ -8,11 +8,23 @@
     <Setting Name="Baudrate" Type="System.String" Scope="Application">
       <Value Profile="(Default)">115200</Value>
     </Setting>
-    <Setting Name="AppPath" Type="System.String" Scope="User">
+    <Setting Name="AppPath" Type="System.String" Scope="Application">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="MacroPath" Type="System.String" Scope="User">
+    <Setting Name="MacroPath" Type="System.String" Scope="Application">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="XRotaryAxisMax" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">3678</Value>
+    </Setting>
+    <Setting Name="XRotaryAxisZero" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1450</Value>
+    </Setting>
+    <Setting Name="XRotaryAxisFeed" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
+    <Setting Name="ToolAngle" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">35</Value>
     </Setting>
   </Settings>
 </SettingsFile>
