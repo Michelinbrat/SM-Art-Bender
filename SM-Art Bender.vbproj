@@ -136,6 +136,7 @@
     <Compile Include="Calibr.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Draw.vb" />
     <Compile Include="EEPROM.Designer.vb">
       <DependentUpon>EEPROM.vb</DependentUpon>
     </Compile>
@@ -151,11 +152,11 @@
     </Compile>
     <Compile Include="Macro.vb" />
     <Compile Include="Module1.vb" />
-    <Compile Include="Module2.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -180,6 +181,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Settings.vb" />
+    <Compile Include="SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AboutBox1.resx">
@@ -205,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PortSet.resx">
       <DependentUpon>PortSet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -243,26 +253,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Image1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="CorelDRAW">
-      <Guid>{FBF4300F-D921-11D1-B806-00A0C90646A9}</Guid>
-      <VersionMajor>22</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="VGCore">
-      <Guid>{95E23C91-BC5A-49F3-8CD1-1FC515597048}</Guid>
-      <VersionMajor>22</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ConnectIcon.ico" />

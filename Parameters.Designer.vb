@@ -217,18 +217,18 @@ Partial Class Parameters
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.ToolStripMenuItem2})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(182, 48)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(184, 48)
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(181, 22)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(183, 22)
         Me.ToolStripMenuItem1.Text = "ToolStripMenuItem1"
         '
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(181, 22)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(183, 22)
         Me.ToolStripMenuItem2.Text = "ToolStripMenuItem2"
         '
         'GroupBox2
@@ -332,7 +332,7 @@ Partial Class Parameters
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(296, 18)
+        Me.Button3.Location = New System.Drawing.Point(296, 48)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 20)
         Me.Button3.TabIndex = 3
