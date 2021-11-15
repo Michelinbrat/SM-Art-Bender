@@ -214,9 +214,9 @@ Partial Class MainForm
         '
         Me.FlowLayoutPanel1.Controls.Add(Me.btnConnect)
         Me.FlowLayoutPanel1.Controls.Add(Me.Button2)
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(3, 3)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(3, 0)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(610, 66)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(610, 69)
         Me.FlowLayoutPanel1.TabIndex = 0
         '
         'btnConnect

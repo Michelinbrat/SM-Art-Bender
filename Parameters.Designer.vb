@@ -40,7 +40,6 @@ Partial Class Parameters
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -65,10 +64,15 @@ Partial Class Parameters
         Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
@@ -81,7 +85,7 @@ Partial Class Parameters
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(680, 313)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(645, 301)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -134,7 +138,7 @@ Partial Class Parameters
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(222, 45)
+        Me.TextBox2.Location = New System.Drawing.Point(222, 71)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(58, 20)
         Me.TextBox2.TabIndex = 1
@@ -142,16 +146,16 @@ Partial Class Parameters
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(7, 48)
+        Me.Label2.Location = New System.Drawing.Point(7, 74)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(120, 13)
+        Me.Label2.Size = New System.Drawing.Size(192, 13)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Значение при 90 град."
+        Me.Label2.Text = "Смещение точки реза отн. абс. нуля"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(296, 44)
+        Me.Button2.Location = New System.Drawing.Point(296, 70)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 20)
         Me.Button2.TabIndex = 3
@@ -160,29 +164,37 @@ Partial Class Parameters
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.TextBox5)
+        Me.GroupBox1.Controls.Add(Me.TextBox4)
         Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Button4)
+        Me.GroupBox1.Controls.Add(Me.Label14)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.Button7)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.TextBox9)
         Me.GroupBox1.Controls.Add(Me.TextBox3)
+        Me.GroupBox1.Controls.Add(Me.TextBox14)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.TextBox2)
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(387, 130)
+        Me.GroupBox1.Size = New System.Drawing.Size(387, 206)
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Поворотное устройство резака"
+        Me.GroupBox1.Text = "Устройство обрезки"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(7, 100)
+        Me.Label9.Location = New System.Drawing.Point(7, 126)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(136, 13)
         Me.Label9.TabIndex = 2
@@ -192,7 +204,7 @@ Partial Class Parameters
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(7, 74)
+        Me.Label3.Location = New System.Drawing.Point(7, 100)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(155, 13)
         Me.Label3.TabIndex = 2
@@ -201,14 +213,14 @@ Partial Class Parameters
         '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(222, 97)
+        Me.TextBox9.Location = New System.Drawing.Point(222, 123)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(58, 20)
         Me.TextBox9.TabIndex = 1
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(222, 71)
+        Me.TextBox3.Location = New System.Drawing.Point(222, 97)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(58, 20)
         Me.TextBox3.TabIndex = 1
@@ -231,40 +243,26 @@ Partial Class Parameters
         Me.ToolStripMenuItem2.Size = New System.Drawing.Size(181, 22)
         Me.ToolStripMenuItem2.Text = "ToolStripMenuItem2"
         '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Controls.Add(Me.TextBox4)
-        Me.GroupBox2.Controls.Add(Me.Button4)
-        Me.GroupBox2.Controls.Add(Me.TextBox5)
-        Me.GroupBox2.Controls.Add(Me.Label6)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 148)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(387, 79)
-        Me.GroupBox2.TabIndex = 4
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Отрезное устройство резака"
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(7, 48)
+        Me.Label4.Location = New System.Drawing.Point(7, 178)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(179, 13)
+        Me.Label4.Size = New System.Drawing.Size(208, 13)
         Me.Label4.TabIndex = 2
-        Me.Label4.Text = "Скорость перемещения, мм\мин."
+        Me.Label4.Text = "Скорость перемещения пилы, мм\мин."
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(222, 19)
+        Me.TextBox4.Location = New System.Drawing.Point(222, 149)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(58, 20)
         Me.TextBox4.TabIndex = 1
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(296, 19)
+        Me.Button4.Location = New System.Drawing.Point(296, 149)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 20)
         Me.Button4.TabIndex = 3
@@ -273,7 +271,7 @@ Partial Class Parameters
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(222, 45)
+        Me.TextBox5.Location = New System.Drawing.Point(222, 175)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(58, 20)
         Me.TextBox5.TabIndex = 1
@@ -281,11 +279,11 @@ Partial Class Parameters
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(7, 22)
+        Me.Label6.Location = New System.Drawing.Point(7, 152)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(180, 13)
+        Me.Label6.Size = New System.Drawing.Size(209, 13)
         Me.Label6.TabIndex = 2
-        Me.Label6.Text = "Максимальное перемещение, мм"
+        Me.Label6.Text = "Максимальное перемещение пилы, мм"
         '
         'GroupBox3
         '
@@ -296,7 +294,7 @@ Partial Class Parameters
         Me.GroupBox3.Controls.Add(Me.TextBox8)
         Me.GroupBox3.Controls.Add(Me.TextBox7)
         Me.GroupBox3.Controls.Add(Me.Label7)
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 233)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 224)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(387, 105)
         Me.GroupBox3.TabIndex = 4
@@ -358,9 +356,9 @@ Partial Class Parameters
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(7, 22)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(111, 13)
+        Me.Label7.Size = New System.Drawing.Size(91, 13)
         Me.Label7.TabIndex = 2
-        Me.Label7.Text = "Эксцентриситет, мм"
+        Me.Label7.Text = "Рабочий ход, мм"
         '
         'GroupBox4
         '
@@ -373,11 +371,14 @@ Partial Class Parameters
         Me.GroupBox4.Controls.Add(Me.TextBox11)
         Me.GroupBox4.Controls.Add(Me.TextBox12)
         Me.GroupBox4.Controls.Add(Me.Label13)
+        Me.GroupBox4.Controls.Add(Me.Label15)
         Me.GroupBox4.Controls.Add(Me.TextBox13)
+        Me.GroupBox4.Controls.Add(Me.Button8)
+        Me.GroupBox4.Controls.Add(Me.TextBox15)
         Me.GroupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GroupBox4.Location = New System.Drawing.Point(405, 12)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(387, 130)
+        Me.GroupBox4.Size = New System.Drawing.Size(387, 165)
         Me.GroupBox4.TabIndex = 4
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Устройство сгиба"
@@ -467,15 +468,66 @@ Partial Class Parameters
         Me.TextBox13.Size = New System.Drawing.Size(58, 20)
         Me.TextBox13.TabIndex = 1
         '
+        'TextBox14
+        '
+        Me.TextBox14.Location = New System.Drawing.Point(222, 45)
+        Me.TextBox14.Name = "TextBox14"
+        Me.TextBox14.Size = New System.Drawing.Size(58, 20)
+        Me.TextBox14.TabIndex = 1
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(296, 44)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(75, 20)
+        Me.Button7.TabIndex = 3
+        Me.Button7.Text = "Настройка"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(7, 48)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(120, 13)
+        Me.Label14.TabIndex = 2
+        Me.Label14.Text = "Значение при 90 град."
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'TextBox15
+        '
+        Me.TextBox15.Location = New System.Drawing.Point(222, 123)
+        Me.TextBox15.Name = "TextBox15"
+        Me.TextBox15.Size = New System.Drawing.Size(58, 20)
+        Me.TextBox15.TabIndex = 1
+        '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(296, 122)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(75, 20)
+        Me.Button8.TabIndex = 3
+        Me.Button8.Text = "Настройка"
+        Me.Button8.UseVisualStyleBackColor = True
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(7, 126)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(197, 13)
+        Me.Label15.TabIndex = 2
+        Me.Label15.Text = "Смещение точки сгиба отн. абс. нуля"
+        Me.Label15.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
         'Parameters
         '
         Me.AcceptButton = Me.OK_Button
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
-        Me.ClientSize = New System.Drawing.Size(838, 354)
+        Me.ClientSize = New System.Drawing.Size(803, 342)
         Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.TableLayoutPanel1)
@@ -490,8 +542,6 @@ Partial Class Parameters
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ContextMenuStrip1.ResumeLayout(False)
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
@@ -514,7 +564,6 @@ Partial Class Parameters
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Label4 As Label
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Button4 As Button
@@ -541,4 +590,10 @@ Partial Class Parameters
     Friend WithEvents TextBox12 As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Button7 As Button
+    Friend WithEvents TextBox14 As TextBox
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Button8 As Button
+    Friend WithEvents TextBox15 As TextBox
 End Class
