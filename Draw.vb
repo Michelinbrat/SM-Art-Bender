@@ -1,4 +1,5 @@
-﻿Module Draw
+﻿Imports Microsoft.VisualBasic.FileIO
+Module Draw
     Class SplineSeg
         Private Property SplineType As String
         Public Coord1, Coord2, Coord3, Coord4 As Point
@@ -53,8 +54,9 @@
             End If
         End Sub
     End Class
-    Public Sub DrawLineSegment()
-
+    Public Sub LoadFile()
+        Dim fileContents As String
+        fileContents = My.Computer.FileSystem.ReadAllText("C:\Test.txt")
     End Sub
     Public Sub Parser()
         Dim tempstr2 As String = "$02;63,303(558,942;618,93;587,095;607,116;347,298;352,514;347,298;363,024)"
