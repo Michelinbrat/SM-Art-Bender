@@ -122,19 +122,19 @@ Partial Class MainForm
         'КалибровкаToolStripMenuItem
         '
         Me.КалибровкаToolStripMenuItem.Name = "КалибровкаToolStripMenuItem"
-        Me.КалибровкаToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.КалибровкаToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.КалибровкаToolStripMenuItem.Text = "Калибровка"
         '
         'EEPROMToolStripMenuItem
         '
         Me.EEPROMToolStripMenuItem.Name = "EEPROMToolStripMenuItem"
-        Me.EEPROMToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EEPROMToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.EEPROMToolStripMenuItem.Text = "EEPROM"
         '
         'ПараметрыToolStripMenuItem
         '
         Me.ПараметрыToolStripMenuItem.Name = "ПараметрыToolStripMenuItem"
-        Me.ПараметрыToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ПараметрыToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.ПараметрыToolStripMenuItem.Text = "Параметры"
         '
         'ОПрограммеToolStripMenuItem

@@ -66,4 +66,8 @@ Public Class MainForm
     Private Sub ПараметрыToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ПараметрыToolStripMenuItem.Click
         Parameters.Show()
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Parser()
+    End Sub
 End Class
