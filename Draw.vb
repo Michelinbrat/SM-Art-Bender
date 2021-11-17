@@ -1,6 +1,6 @@
 ﻿Imports Microsoft.VisualBasic.FileIO
 Module Draw
-    Class SplineSeg
+    Structure SplineSeg
         Private Property SplineType As String
         Public Coord1, Coord2, Coord3, Coord4 As Point
         Public Angle As Double
@@ -53,10 +53,26 @@ Module Draw
                 Angle = Arrstr(2)
             End If
         End Sub
-    End Class
+    End Structure
     Public Sub LoadFile()
-        Dim fileContents As String
-        fileContents = My.Computer.FileSystem.ReadAllText("C:\Test.txt")
+
+        Using fileReader As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader("F:\binder.txt")
+
+            Dim stringReader As String
+            Dim lines As Long = 0
+            Dim GCodeLine() As SplineSeg = Nothing
+
+            Do
+
+                stringReader = fileReader.ReadLine()
+                If Left(stringReader, 2) = "$0" Then
+                    GCodeLine(lines).GetAttrFromString(stringReader)
+                    lines = lines + 1
+                    ReDim GCodeLine(lines)
+                End If
+            Loop Until fileReader.EndOfStream
+            MsgBox(lines)
+        End Using
     End Sub
     Public Sub Parser()
         Dim tempstr2 As String = "$02;63,303(558,942;618,93;587,095;607,116;347,298;352,514;347,298;363,024)"
