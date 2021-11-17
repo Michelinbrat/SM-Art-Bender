@@ -1,5 +1,7 @@
-﻿Imports Microsoft.VisualBasic.FileIO
+﻿Imports System.Drawing.Drawing2D
+Imports Microsoft.VisualBasic.FileIO
 Module Draw
+    Public GCodeLine() As SplineSeg = Nothing
     Structure SplineSeg
         Private Property SplineType As String
         Public Coord1, Coord2, Coord3, Coord4 As Point
@@ -60,7 +62,7 @@ Module Draw
 
             Dim stringReader As String
             Dim lines As Long = 0
-            Dim GCodeLine() As SplineSeg = Nothing
+
 
             Do
 
@@ -85,5 +87,13 @@ Module Draw
         Debug.Print(wa.Coord2.Y)
         Debug.Print(wa.Length)
         Debug.Print(wa.Angle)
+    End Sub
+    Public Sub DrawOnForm()
+        Using redPen As New Pen(Color.Red),
+            formGraphics As Graphics = MainForm.PictureBox1.CreateGraphics()
+            formGraphics.DrawLine(redPen, 0, 0, 200, 200)
+            formGraphics.DrawBeziers()
+        End Using
+
     End Sub
 End Module

@@ -51,6 +51,7 @@ Partial Class MainForm
         Me.rtbDisplay = New System.Windows.Forms.RichTextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -60,6 +61,7 @@ Partial Class MainForm
         Me.StatusStrip1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.FlowLayoutPanel2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SP
@@ -146,10 +148,12 @@ Partial Class MainForm
         'ToolStrip1
         '
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(25, 25)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripSeparator1})
+        Me.ToolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(24, 500)
+        Me.ToolStrip1.Size = New System.Drawing.Size(30, 500)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -159,7 +163,7 @@ Partial Class MainForm
         Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(21, 20)
+        Me.ToolStripButton1.Size = New System.Drawing.Size(29, 29)
         Me.ToolStripButton1.Text = "ToolStripButton1"
         '
         'ToolStripButton2
@@ -179,12 +183,13 @@ Partial Class MainForm
         'SplitContainer1
         '
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer1.Location = New System.Drawing.Point(24, 24)
+        Me.SplitContainer1.Location = New System.Drawing.Point(30, 24)
         Me.SplitContainer1.Name = "SplitContainer1"
         '
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.AllowDrop = True
+        Me.SplitContainer1.Panel1.Controls.Add(Me.PictureBox1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.StatusStrip1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.FlowLayoutPanel1)
         '
@@ -192,8 +197,8 @@ Partial Class MainForm
         '
         Me.SplitContainer1.Panel2.BackColor = System.Drawing.SystemColors.Control
         Me.SplitContainer1.Panel2.Controls.Add(Me.FlowLayoutPanel2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(871, 500)
-        Me.SplitContainer1.SplitterDistance = 613
+        Me.SplitContainer1.Size = New System.Drawing.Size(865, 500)
+        Me.SplitContainer1.SplitterDistance = 608
         Me.SplitContainer1.TabIndex = 2
         '
         'StatusStrip1
@@ -201,7 +206,7 @@ Partial Class MainForm
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripProgressBar1})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 478)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(613, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(608, 22)
         Me.StatusStrip1.TabIndex = 0
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -227,6 +232,8 @@ Partial Class MainForm
         Me.btnConnect.Name = "btnConnect"
         Me.btnConnect.Size = New System.Drawing.Size(60, 60)
         Me.btnConnect.TabIndex = 0
+        Me.btnConnect.Text = "вкл"
+        Me.btnConnect.TextAlign = System.Drawing.ContentAlignment.BottomRight
         Me.btnConnect.UseVisualStyleBackColor = True
         '
         'ImageList1
@@ -254,7 +261,7 @@ Partial Class MainForm
         Me.FlowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.FlowLayoutPanel2.Location = New System.Drawing.Point(0, 299)
         Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
-        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(254, 201)
+        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(253, 201)
         Me.FlowLayoutPanel2.TabIndex = 1
         '
         'rtbDisplay
@@ -277,6 +284,15 @@ Partial Class MainForm
         Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
         Me.NotifyIcon1.Text = "SM-Art Bender"
         Me.NotifyIcon1.Visible = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 69)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(609, 406)
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
         '
         'MainForm
         '
@@ -303,6 +319,7 @@ Partial Class MainForm
         Me.StatusStrip1.PerformLayout()
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.FlowLayoutPanel2.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -334,4 +351,5 @@ Partial Class MainForm
     Friend WithEvents ПараметрыToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NotifyIcon1 As NotifyIcon
     Friend WithEvents ImageList1 As ImageList
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
