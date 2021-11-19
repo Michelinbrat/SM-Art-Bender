@@ -3,11 +3,13 @@ Imports Microsoft.VisualBasic.FileIO
 Module Draw
     Public GCodeLine() As SplineSeg = Nothing
     Structure SplineSeg
-        Private Property SplineType As String
+        Public Property SplineType As String
+        Private 
         Public Coord1, Coord2, Coord3, Coord4 As Point
         Public Angle As Double
         Public Length As Double
         Public tempstr As String
+        Public PointsArr As Point()
 
         Public Sub GetAttrFromString(instr As String)
             Dim pos1, pos3 As Integer
@@ -33,6 +35,15 @@ Module Draw
                 tempstr = instr.Substring(0, instr.IndexOf("("))
                 Arrstr = tempstr.Split(";")
                 Length = Arrstr(1)
+                ReDim PointsArr(4)
+                PointsArr(0).X = Coord1.X
+                PointsArr(0).Y = Coord1.Y
+                PointsArr(1).X = Coord2.X
+                PointsArr(1).Y = Coord2.Y
+                PointsArr(2).X = Coord3.X
+                PointsArr(2).Y = Coord3.Y
+                PointsArr(3).X = Coord4.X
+                PointsArr(3).Y = Coord4.Y
             End If
 
             If Left(instr, 3) = "$01" Then
@@ -53,6 +64,11 @@ Module Draw
                 Arrstr = tempstr.Split(";")
                 Length = Arrstr(1)
                 Angle = Arrstr(2)
+                ReDim PointsArr(2)
+                PointsArr(0).X = Coord1.X
+                PointsArr(0).Y = Coord1.Y
+                PointsArr(1).X = Coord2.X
+                PointsArr(1).Y = Coord2.Y
             End If
         End Sub
     End Structure
@@ -71,10 +87,15 @@ Module Draw
                     GCodeLine(lines).GetAttrFromString(stringReader)
                     lines = lines + 1
                     ReDim GCodeLine(lines)
+                Else
+                    MsgBox("Ошибка чтения файла")
+                    Exit Sub
                 End If
+
             Loop Until fileReader.EndOfStream
             MsgBox(lines)
         End Using
+
     End Sub
     Public Sub Parser()
         Dim tempstr2 As String = "$02;63,303(558,942;618,93;587,095;607,116;347,298;352,514;347,298;363,024)"
@@ -92,7 +113,11 @@ Module Draw
         Using redPen As New Pen(Color.Red),
             formGraphics As Graphics = MainForm.PictureBox1.CreateGraphics()
             formGraphics.DrawLine(redPen, 0, 0, 200, 200)
-            formGraphics.DrawBeziers()
+            For n = 0 To GCodeLine.Length
+                If GCodeLine(n).SplineType = "line" Then
+
+                End If
+            Next
         End Using
 
     End Sub
