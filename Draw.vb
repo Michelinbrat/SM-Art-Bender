@@ -4,7 +4,12 @@ Module Draw
     Public GCodeLine() As SplineSeg = Nothing
     Structure SplineSeg
         Public Property SplineType As String
-        Private 
+        Private Enum segtype
+            Line
+            Bezier
+            BezierApprox
+        End Enum
+
         Public Coord1, Coord2, Coord3, Coord4 As Point
         Public Angle As Double
         Public Length As Double
