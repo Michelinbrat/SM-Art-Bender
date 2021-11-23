@@ -3,13 +3,13 @@ Imports Microsoft.VisualBasic.FileIO
 Module Draw
     Public GCodeLine() As SplineSeg
     Structure SplineSeg
-
+        Dim SegmentType As String
         Public Property SegType As String
             Get
-                Return
+                Return SegmentType
             End Get
-            Set
-                SegType = "ssdvc"
+            Set(ByVal val As String)
+                SegmentType = val
             End Set
         End Property
         Public SegPoints As Point()
@@ -19,12 +19,13 @@ Module Draw
     End Structure
     Public Function GetPointArrFromString(instr As String) As Point()
         Dim pos1, pos3 As Integer
-        Dim Arrstr() As String
+        Dim Arrstr(8) As String
         Dim tempstr As String
-        Dim pointsarr(8) As Point
+        Dim pointsarr() As Point
+
         Select Case Left(instr, 3)
             Case "$02"
-                'SplineType = "Curve"
+                'ReDim GetPointArrFromString(4) 'SplineType = "Curve"
                 ReDim pointsarr(4)
                 pos1 = instr.IndexOf("(") 'Ищем скобку (
                 pos3 = instr.LastIndexOf(")")
@@ -48,6 +49,7 @@ Module Draw
                 Return pointsarr
 
             Case "$01"
+                'ReDim GetPointArrFromString(2)
                 ReDim pointsarr(2)
                 'SplineType = "Line"
                 pos1 = instr.IndexOf("(") 'Ищем скобку (
@@ -75,21 +77,26 @@ Module Draw
 
             Dim stringReader As String
             Dim lines As Long = 0
-
+            Dim stringtype As String
 
             Do
-                ReDim GCodeLine(lines + 1)
+
                 stringReader = fileReader.ReadLine()
-                If Left(stringReader, 3) = "$02" Then
-                    GCodeLine(lines).SegPoints = GetPointArrFromString(stringReader)
-                    GCodeLine(lines).SegType.Curve
-                    lines = lines + 1
+                stringtype = Left(stringReader, 3)
+                Select Case stringtype
 
-                Else
-                    'MsgBox("Ошибка чтения файла")
-                    'Exit Sub
-                End If
+                    Case "$02"
+                        GCodeLine(lines).SegPoints = GetPointArrFromString(stringReader)
+                        GCodeLine(lines).SegmentType = "Curve"
 
+                    Case "$01"
+
+                        GCodeLine(lines).SegPoints = GetPointArrFromString(stringReader)
+                        GCodeLine(lines).SegmentType = "Line"
+                    Case Else
+                End Select
+                lines = lines + 1
+                ReDim Preserve GCodeLine(lines)
             Loop Until fileReader.EndOfStream
             MsgBox(lines)
         End Using
@@ -104,10 +111,10 @@ Module Draw
             Debug.Print("start")
             For n = 0 To GCodeLine.GetUpperBound(0)
                 'Debug.Print(GCodeLine(n).Coord1.X)
-                If GCodeLine(n).SegType.Curve Then Debug.Print("New" & GCodeLine(n).SplineType) : formGraphics.DrawBeziers(redPen, GCodeLine(n).PointsArr)
+                If GCodeLine(n).SegType = "Curve" Then formGraphics.DrawBeziers(redPen, GCodeLine(n).SegPoints)
                 'If GCodeLine(n).SplineType = "Line" Then formGraphics.DrawLines(redPen, GCodeLine(n).PointsArr)
                 'If GCodeLine(n).SplineType = "Line" Then formGraphics.DrawLine(redPen, 45, 60, 100, 100)
-                Next
+            Next
         End Using
 
     End Sub
