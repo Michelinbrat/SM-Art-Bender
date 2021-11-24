@@ -15,7 +15,6 @@ Module Draw
         Public SegPoints As Point()
         Public Angle As Double
         Public Length As Double
-
     End Structure
     Public Function GetPointArrFromString(instr As String) As Point()
         Dim pos1, pos3 As Integer
