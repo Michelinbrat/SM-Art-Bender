@@ -20,7 +20,7 @@ Module Draw
         Dim pos1, pos3 As Integer
         Dim Arrstr(8) As String
         Dim tempstr As String
-        Dim pointsarr() As Point
+        Dim PointsArr() As Point
 
         Select Case Left(instr, 3)
             Case "$02"
